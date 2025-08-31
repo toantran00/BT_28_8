@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -70,7 +71,7 @@
 </head>
 <body>
     <c:choose>
-        <!-- Kiểm tra nếu không có tài khoản trong session -->
+        <%-- Kiểm tra nếu không có tài khoản trong session --%>
         <c:when test="${empty sessionScope.account}">
             <div class="right-topbar">
                 <ul>
@@ -80,7 +81,7 @@
             </div>
         </c:when>
 
-        <!-- Nếu có tài khoản trong session -->
+        <%-- Nếu có tài khoản trong session --%>
         <c:otherwise>
             <div class="right-topbar">
                 <ul>
