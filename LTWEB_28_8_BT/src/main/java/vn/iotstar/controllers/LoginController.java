@@ -75,13 +75,13 @@ public class LoginController extends HttpServlet {
             req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
     }
-
+    public static final String SESSION_USERNAME = "username";
+    public static final String COOKIE_REMEMBER = "username";
     private void saveRememberMe(HttpServletResponse response, String username) {
         Cookie cookie = new Cookie(COOKIE_REMEMBER, username);
         cookie.setMaxAge(30 * 60); // Lưu cookie trong 30 phút
         response.addCookie(cookie);
     }
 
-    public static final String SESSION_USERNAME = "username";
-    public static final String COOKIE_REMEMBER = "username";
+
 }

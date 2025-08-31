@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.sql.Date;
 
 public class User implements Serializable {
+	/**
+	 * 
+	 */
 	private int id;
 	private String email;
 	private String userName;

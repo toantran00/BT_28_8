@@ -16,7 +16,7 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public User get(String username) {
 		// TODO Auto-generated method stub
-		String sql = "SELECT * FROM User WHERE username = ? ";
+		String sql = "SELECT * FROM [User] WHERE username = ? ";
 		try {
 		conn = new DBConnection().getConnection();
 		ps = conn.prepareStatement(sql);
@@ -30,7 +30,7 @@ public class UserDaoImpl implements UserDao {
 		user.setFullName(rs.getString("fullname"));
 		user.setPassWord(rs.getString("password"));
 		user.setAvatar(rs.getString("avatar"));
-		user.setRoleid(Integer.parseInt(rs.getString("roleid")));
+		user.setRoleid(rs.getInt("roleid"));
 		user.setPhone(rs.getString("phone"));
 		user.setCreatedDate(rs.getDate("createdDate"));
 		return user; }
