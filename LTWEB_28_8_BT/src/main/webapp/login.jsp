@@ -102,6 +102,22 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
             color: #47B5ED;
             text-decoration: none;
         }
+        
+        .forgot-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .forgot-link a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .forgot-link a:hover {
+            color: #47B5ED;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -130,6 +146,10 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
             </div>
 
             <button type="submit" class="login-button">Đăng nhập</button>
+            
+            <div class="forgot-link">
+                <a href="<%=path%>/forgot-password">Quên mật khẩu?</a>
+            </div>
 
             <div class="register-link">
                 <p>

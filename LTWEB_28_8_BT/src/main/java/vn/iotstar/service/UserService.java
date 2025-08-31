@@ -12,4 +12,7 @@ public interface UserService {
 	boolean checkExistEmail(String email);
 	boolean checkExistUsername(String username);
 	boolean checkExistPhone(String phone);
+	
+	 boolean updatePassword(String email, String newPassword);
+	    User getUserByEmail(String email);
 }	

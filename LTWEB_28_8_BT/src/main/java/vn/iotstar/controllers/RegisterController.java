@@ -66,8 +66,6 @@ public class RegisterController extends HttpServlet {
 		}
 		boolean isSuccess = service.register(email, password, username, fullname, phone);
 		if (isSuccess) {
-			// SendMail sm = new SendMail();
-			// sm.sendMail(email, "Shopping.iotstar.vn", "Welcome to Shopping. Please Login to use service. Thanks !");
 			req.setAttribute("alert", alertMsg);
 			resp.sendRedirect(req.getContextPath() + "/login");
 		} else {
